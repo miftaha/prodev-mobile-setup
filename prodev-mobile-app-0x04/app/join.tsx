@@ -4,7 +4,7 @@ import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context'
 import { FontAwesome, Ionicons } from '@expo/vector-icons'
 import { Link } from 'expo-router'
 
-export default function SignIn() {
+export default function Join() {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
@@ -14,7 +14,7 @@ export default function SignIn() {
           </Link>
           <Image source={require('@/assets/images/logo-green.png')} />
         </View>
-        <Text style={styles.titleText}>Sign in to your</Text>
+        <Text style={styles.titleText}>Create Your</Text>
         <Text style={styles.titleText}>Account</Text>
         <Text style={styles.subText}>
           Enter your email and password to sign in.
@@ -28,18 +28,24 @@ export default function SignIn() {
               style={styles.formControl}
             />
           </View>
-          <View style={{ marginTop: 20 }}>
+          <View>
             <Text style={styles.formLabel}>Password</Text>
             <View style={styles.formPasswordControl}>
-              <TextInput style={{ flex: 1 }} />
+              <TextInput style={styles.passwordControl} />
               <FontAwesome name="eye-slash" size={24} color="#7E7B7B" />
             </View>
           </View>
-          <Text style={styles.forgotPasswordText}>Forgot password?</Text>
+          <View>
+            <Text style={styles.formLabel}>Password</Text>
+            <View style={styles.formPasswordControl}>
+              <TextInput style={styles.passwordControl} />
+              <FontAwesome name="eye-slash" size={24} color="#7E7B7B" />
+            </View>
+          </View>
         </View>
 
         <TouchableOpacity style={styles.primaryButton}>
-          <Text style={styles.buttonText}>Sign in</Text>
+          <Text style={styles.buttonText}>Create</Text>
         </TouchableOpacity>
 
         <View style={styles.dividerGroup}>
@@ -49,40 +55,28 @@ export default function SignIn() {
         </View>
 
         <View style={styles.secondaryButtonGroup}>
-          <TouchableOpacity style={styles.secondaryButton}>
-            <View
-              style={{
-                flexDirection: 'row',
-                alignItems: 'center',
-                gap: 5,
-              }}
-            >
+          <TouchableOpacity>
+            <View style={styles.secondaryButton}>
               <Image source={require('@/assets/images/google.png')} />
-              <Text style={styles.socialMediaButtonText}>
+              <Text style={styles.secondaryButtonText}>
                 Continue with Google
               </Text>
             </View>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.socialMediaButton}>
-            <View
-              style={{
-                flexDirection: 'row',
-                alignItems: 'center',
-                gap: 5,
-              }}
-            >
+          <TouchableOpacity>
+            <View style={styles.secondaryButton}>
               <Image source={require('@/assets/images/facebook.png')} />
-              <Text style={styles.socialMediaButtonText}>
+              <Text style={styles.secondaryButtonText}>
                 Continue with Facebook
               </Text>
             </View>
           </TouchableOpacity>
         </View>
 
-        <View style={styles.subTextGroup}>
+        <View style={styles.signupgroup}>
           <Text style={styles.subText}>Don't have an account?</Text>
-          <Text style={styles.subTextJoin}>Join now</Text>
+          <Text style={styles.signupSubTitleText}>Join now</Text>
         </View>
       </SafeAreaView>
     </SafeAreaProvider>
