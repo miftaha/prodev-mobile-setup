@@ -1,4 +1,3 @@
-import { Link } from 'expo-router'
 import {
   Text,
   View,
@@ -35,17 +34,13 @@ export default function Index() {
             <View style={{ position: 'absolute', bottom: 0, width: '100%' }}>
               <View style={styles.buttonGroup}>
                 <TouchableOpacity style={styles.button}>
-                  <Link href="/join">
-                    <Text style={{ ...styles.textSmall, color: 'black' }}>
-                      Join here
-                    </Text>
-                  </Link>
+                  <Text style={{ ...styles.textSmall, color: 'black' }}>
+                    Join here
+                  </Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity style={styles.transparentButton}>
-                  <Link href="/signin">
-                    <Text style={styles.textSmall}>Sign In</Text>
-                  </Link>
+                  <Text style={styles.textSmall}>Sign In</Text>
                 </TouchableOpacity>
               </View>
               <View style={{ alignItems: 'center', paddingVertical: 20 }}>
